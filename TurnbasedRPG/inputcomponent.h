@@ -27,6 +27,11 @@ public:
     virtual void Init() override;
     virtual Entity* GetTarget() const override; //query entities from m_CombatSystem
     virtual CombatManeuver GetAttack() const override;
+	std::map<std::string, int> GetStats() const { return _stats; }
+private:
+    std::map<std::string, int> _stats;
+    void AssignStats(int availablePoints);
+    void CalculateHP();
 };
 
 class AIInputComponent : public InputComponent

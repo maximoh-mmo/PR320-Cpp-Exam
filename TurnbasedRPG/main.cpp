@@ -6,8 +6,6 @@ int main()
 {
     Entity combatSystemEntity;
     CombatSystem* combatSystem = combatSystemEntity.AddComponent<CombatSystem>();
-    //Entity enemyFactoryEntity;
-    //EnemyFactory* enemyFactory = enemyFactoryEntity.AddComponent<EnemyFactory>();
     while (!combatSystem->IsGameOver())
     {
         combatSystem->Update();

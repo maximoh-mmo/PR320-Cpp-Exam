@@ -1,6 +1,8 @@
 #include "fightercomponent.h"
 #include <iostream>
 #include <algorithm>
+#include "entity.h"
+#include "inputcomponent.h"
 
 FighterComponent::~FighterComponent()
 {    
@@ -52,9 +54,17 @@ void FighterComponent::Equip_Weapon(WeaponAttributes weapon)
 void FighterComponent::OnMessage(int id)
 {
 	Component::OnMessage(id);
-	if (id == 9)
+	switch (id) 
 	{
+	case 2:
+		_stats = GetOwner().GetComponent<PlayerInputComponent>()->GetStats();
+		break;
+	case 9:
 		// set enabled false pending delete	
 		SetEnabled(false);
+		break;
+	default:
+		throw std::runtime_error("Unknown message id");
+		break;
 	}
 }
