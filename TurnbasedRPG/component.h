@@ -5,7 +5,8 @@ enum class ComponentID
 {
 	Input,
 	Fighter,
-	CombatSystem
+	CombatSystem,
+	GameState,
 };
 
 class Entity;

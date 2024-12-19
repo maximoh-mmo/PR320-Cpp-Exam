@@ -31,6 +31,7 @@
     <ClInclude Include="combatmaneuver.h" />
     <ClInclude Include="combatsystem.h" />
     <ClInclude Include="component.h" />
+    <ClInclude Include="gamestatecomponent.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="enemyfactory.h" />
     <ClInclude Include="entity.h" />

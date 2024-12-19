@@ -19,5 +19,6 @@
     <ClInclude Include="util.h" />
     <ClInclude Include="enemyfactory.h" />
     <ClInclude Include="weaponattributes.h" />
+    <ClInclude Include="gamestatecomponent.h" />
   </ItemGroup>
 </Project>
